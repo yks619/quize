@@ -13,53 +13,71 @@
     <title>Trainigpoints</title>
 </head>
 
-<body class="bg-blue-100 h-screen p-1">
+<body class=" h-screen p-1">
     <header class="bg-white ">
-        <nav class=" flex justify-between bg-white  items-center w-[92%] mx-auto ">
-            <div>
-                <img class="w-[200px]" src="images/logo.svg" alt="">
-            </div>
-            <div
-                class="nav-links md:static absolute bg-white md:min-h-fit min-h-8 left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-6 gap-8">
-
-                    <li>
-                        <a class="hover:text-orange-500 " href="#">Courses</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-orange-500" href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-orange-500" href="#">Blogs</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-orange-500" href="#">News & Events</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-orange-500" href="#">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex items-center gap-6">
-                <button class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-yellow-500">Book
-                    a Consultation</button>
-                <box-icon onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden" name='menu'></box-icon>
+        <nav class="bg-white shadow-lg">
+            <div class=" mx-auto px-4">
+                <div class="flex justify-between items-center p-4">
+                    <!-- Logo -->
+                    <div class="">
+                        <img src="images/logo.svg" class="w-[200px]" alt="">
+                    </div>
+    
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center gap-[200px]">
+                        <div class="space-x-8">
+                        <a href="#" class="text-gray-600 hover:text-orange-600 cursor-pointer">Courses</a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 cursor-pointer">About Us</a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 cursor-pointer">Blogs</a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 cursor-pointer">News & Events</a>
+                        <a href="#" class="text-gray-600 hover:text-orange-600 cursor-pointer">Contact Us</a>
+                        </div>
+                        <button class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-yellow-500 ">
+                            Book a Consultation
+                        </button>
+                    </div>
+    
+                    <!-- Hamburger Button -->
+                    <div class="lg:hidden">
+                        
+                        <button id="menuBtn" class="flex items-center px-3 py-2 text-gray-600 hover:text-blue-600">
+                            <box-icon name='menu-alt-right' ></box-icon>
+                        </button>
+                       
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden lg:hidden">
+                    <div class="px-2 pt-2 pb-3 space-y-1 bg-white">
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md cursor-pointer">Courses</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md cursor-pointer">About Us</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md cursor-pointer">Blogs</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md cursor-pointer">News & Events</a>
+                        <a href="#" class="block px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md cursor-pointer">Contact Us</a>
+    
+                        <button class="w-full mt-2 px-3 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 ">
+                            Book a Consultation
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="flex justify-start p-20 h-screen bg-cover bg-center bg-[url('images/hero-image.svg')]">
-        <div class="text-center md:text-left px-4 md:px-8">
-          <h1 class="text-[2rem] md:text-[3rem] lg:text-[3.25rem] font-bold text-white leading-tight">
-            We Provide <br />
-            Job-oriented IT <br /> Courses in Nepal
+    
+    <section class="flex justify-start px-10 py-40 h-screen bg-cover bg-center bg-[url('images/hero-image.svg')]">
+        <div class="text-center md:text-left sm:text-start ">
+          <h1 class="text-[3rem] md:text-[3rem] lg:text-[3.25rem] font-bold text-white leading-tight">
+            We Provide <br/>
+            Job-oriented IT <br/> Courses in Nepal
           </h1>
-          <p class="text-[0.875rem] md:text-[1rem] text-white font-normal mt-4">
+          <p class="text-[1.5rem] md:text-[2rem] text-white font-normal mt-4">
             Our students consider us the most trusted and affordable option for pursuing IT education <br class="hidden md:block" />
             in Nepal.
           </p>
           <div class="flex flex-col md:flex-row gap-4 mt-6 justify-center md:justify-start">
             <button
-              class="h-[3rem] w-[10rem] md:w-[12rem] bg-orange-500 border-2 border-orange-500 text-white rounded-full hover:bg-yellow-500 transition duration-300">
+              class="h-[3rem] w-[11rem] md:w-[12rem] bg-orange-500 border-2 border-orange-500 text-white rounded-full hover:bg-yellow-500 transition duration-300">
               Book a Consultation
             </button>
             <button
@@ -73,18 +91,18 @@
 
       <section class="h-auto w-full bg-amber-300 flex flex-col md:flex-row p-6 md:p-12 gap-6 md:gap-0 justify-between">
         <div class="w-full md:w-[50%]">
-          <h1 class="text-2xl md:text-4xl lg:text-5xl text-[#000000] font-semibold leading-snug">
+          <h1 class="sm:text-start p-4 sm:text-3xl md:text-4xl lg:text-5xl text-[#000000] font-semibold leading-snug">
             We're a leading IT Training Institute in Nepal.
           </h1>
         </div>
         <div class="w-full md:w-[50%]">
-          <p class="text-sm md:text-base lg:text-lg text-neutral-500 leading-relaxed">
+          <p class="text-[22px] md:text-base lg:text-lg text-neutral-500 leading-relaxed">
             A group of experienced IT professionals in Nepal founded Trainingpoint to fill the gap between traditional
             education and real-world IT requirements. With a decade of experience, these founders set out to revolutionize
             IT education in Nepal, creating top-tier IT training programs that train students to be job-ready within a few
             months. Our top-tier IT courses elevate Nepal's IT industry. Be a part of it!
           </p>
-          <h3 class="text-[#000000] font-normal underline decoration-solid mt-4 cursor-pointer">
+          <h3 class="text-[#000000] sm:text-xl font-normal underline decoration-solid mt-4 cursor-pointer">
             More About Us
           </h3>
         </div>
@@ -92,49 +110,48 @@
       
 
     <div class="mt-8">
-  <h2 class="text-2xl md:text-4xl font-bold text-center md:text-left ml-4 md:ml-20">
+  <h2 class="text-4xl md:text-4xl font-semibold text-start md:text-center ml-4 ">
     Featured IT Courses
   </h2>
 </div>
 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
   <!-- Web Development Card -->
-  <div class="bg-slate-200 rounded-2xl overflow-hidden shadow-md">
+  <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md">
     <img class="w-full h-48 object-cover" src="images/web development.svg.webp" alt="Web Development">
     <div class="p-6">
       <h3 class="text-xl md:text-2xl font-semibold text-[#000000]">
         Web Development
       </h3>
-      <p class="text-sm md:text-base text-[#020817] mt-4">
+      <p class="text-[18px] md:text-base text-[#020817] mt-4">
         Our Web Development training has helped over 200 students become professionals. | Career: Front end Web
         Developer, React Developer, Web Designer
       </p>
       <div class="mt-6 flex items-center">
+        <div class="flex items-center">
         <i class="ri-time-line text-xl"></i>
-        <p class="ml-2 text-sm md:text-base">2 months</p>
-        <button
-          class="ml-auto px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 transition duration-300">
-          View Courses
-        </button>
+        <p class="ml-2 text-[18px] md:text-base">2 months</p>
+     </div>
+        <button class="ml-6 px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 ">View Courses</button>
       </div>
     </div>
   </div>
 
   <!-- Project Management Card -->
-  <div class="bg-slate-200 rounded-2xl overflow-hidden shadow-md">
+  <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md">
     <img class="w-full h-48 object-cover" src="images/pm.webp" alt="Project Management">
     <div class="p-6">
       <h3 class="text-xl md:text-2xl font-semibold text-[#000000]">
         Project Management
       </h3>
-      <p class="text-sm md:text-base text-[#020817] mt-4">
+      <p class="text-[18px] md:text-base text-[#020817] mt-4">
         Our professional project management training has helped over 27 students become professionals | Career:
         Project Coordinator, Program Manager, IT Project Manager
       </p>
       <div class="mt-6 flex items-center">
         <i class="ri-time-line text-xl"></i>
-        <p class="ml-2 text-sm md:text-base">3 months</p>
+        <p class="ml-2 text-[18px] md:text-base">3 months</p>
         <button
-          class="ml-auto px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 transition duration-300">
+          class="ml-6 px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 ">
           View Courses
         </button>
       </div>
@@ -142,24 +159,21 @@
   </div>
 
   <!-- Quality Assurance Card -->
-  <div class="bg-slate-200 rounded-2xl overflow-hidden shadow-md">
+  <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md">
     <img class="w-full h-48 object-cover" src="images/QA.webp" alt="Quality Assurance">
     <div class="p-6">
       <h3 class="text-xl md:text-2xl font-semibold text-[#000000]">
         Quality Assurance
       </h3>
-      <p class="text-sm md:text-base text-[#020817] mt-4">
+      <p class="text-[18px] md:text-base text-[#020817] mt-4">
         Join our internship-focused QA training in Nepal and learn software quality assurance skills. Get
         proficiency in manual and automation testing. | Career: QA Intern/Trainee, QA Tester, QA Automation Engineer,
         Test Analyst
       </p>
       <div class="mt-6 flex items-center">
         <i class="ri-time-line text-xl"></i>
-        <p class="ml-2 text-sm md:text-base">2 months</p>
-        <button
-          class="ml-auto px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 transition duration-300">
-          View Courses
-        </button>
+        <p class="ml-2 text-[18px] md:text-base">2 months</p>
+        <button class="ml-6 px-6 py-2 border-2 border-white text-white bg-orange-500 rounded-full hover:bg-yellow-500 ">View Courses</button>
       </div>
     </div>
   </div>
@@ -173,12 +187,15 @@
   
   <div class="bg-red-50 mt-12">
     <!-- Header Section -->
-    <div class="p-8 text-center md:text-left">
-        <b class="text-black text-2xl md:text-4xl font-14__Manrope_da1155">What Students Say About Our IT Programs</b>
-        <p class="font-14__Manrope_da1155 text-lg md:text-2xl mt-4">
-            Our <span class="text-blue-700">best-in-class IT courses</span> have helped over <span class="text-blue-700">200+ IT students</span> become professionals.
-        </p>
-        <div class="flex justify-center md:justify-start gap-4 mt-4">
+    <div class="p-8 text-center md:text-left ">
+
+        <b class="text-black text-[40px] md:text-4xl font-14__Manrope_da1155">What Students Say About Our IT Programs</b>
+        
+        <div class="flex items-center justify-between ">
+            <p class="font-14__Manrope_da1155 text-[22px] md:text-2xl mt-4">
+                Our <span class="text-blue-700">best-in-class IT courses</span> have helped over <span class="text-blue-700">200+ IT students</span> <br> become professionals.
+            </p>
+            <div class="flex justify-end gap-4">
             <button class="rounded-full h-10 w-10 bg-slate-200 hover:bg-orange-500 flex items-center justify-center">
                 <i class="ri-arrow-left-line text-white"></i>
             </button>
@@ -186,12 +203,13 @@
                 <i class="ri-arrow-right-line text-white"></i>
             </button>
         </div>
+        </div>
     </div>
 
     <!-- Student Reviews Section -->
     <div class="flex flex-col md:flex-row justify-between p-8 gap-8">
         <!-- Review 1 -->
-        <div class="flex flex-wrap items-center  text-center md:text-left ">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left ">
             <img class="rounded-full w-24 h-24 md:w-32 md:h-32" src="images/image (2).webp" alt="Raihan Ahemad">
             <div class="mt-8">
                 <p class="text-[18px] md:text-[20px] font-poppins">
@@ -228,128 +246,131 @@
     </div>
 </div>
 
-<div class="p-8 md:p-16 mt-8">
-    <div class="text-center md:text-left">
-        <b class="text-2xl md:text-4xl">Our Placement Partner</b>
-        <p class="text-sm md:text-base text-[#020817] mt-4">
-            As a leading <span class="text-black font-bold">IT training center in Nepal,</span> we've partnered with global brands to provide our students with exclusive job placement opportunities. By completing our IT course, our graduates gain confidence and valuable connections before they enter the IT industry.
+<div class="p-8 md:p-16  bg-slate-50">
+    <div class="text-center md:text-left mt-8">
+        <b class="text-4xl">Our Placement Partner</b>
+        <p class="text-[22px] text-[#020817] ">
+            As a leading <span class="text-[#020817] font-bold">IT training center in Nepal,</span> we've partnered with <br> global brands to provide our students with exclusive job <br> placement opportunities. By completing our IT course, our <br graduates gain confidence and valuable connections before they <br> enter the IT industry.
         </p>
     </div>
-</div>
 
-<marquee loop="-1" scrollamount="5" class="mt-12 bg-slate-100">
-    <div class="flex gap-8 px-4 md:px-8 overflow-x-auto">
-        <img src="images/AITC.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/aqore.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/asterdio.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/ekbana.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/fourwalls.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/pek academy.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
-        <img src="images/sikshya tech.webp" alt="" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px]">
+
+<marquee loop="-1" scrollamount="5" class="mt-12 bg-slate-50 ">
+    <div class="flex gap-12 px-4 md:px-8 overflow-x-auto">
+        <img src="images/AITC.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/aqore.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/asterdio.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/ekbana.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/fourwalls.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/pek academy.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
+        <img src="images/sikshya tech.webp" alt="" class=" sm:w-[100px] md:w-[200px] w-[300px]">
     </div>
 </marquee>
-
-<div class="bg-red-50 p-4 mt-8 mx-auto">
-    <b class="text-4xl">Meet Your Mentors</b>
-    <p class="text-xl mt-4 ">Unleash your potential with Trainingpoint's industry veterans who have mastered the ever-changing technology landscape.</p>
 </div>
 
-<div class="flex flex-wrap justify-center gap-4 mt-8">
-    <!-- Mentor 1 -->
-    <div class="relative group w-full sm:w-72 md:w-80 lg:w-96">
-        <div class="absolute p-2 mb-10 mt-32 group-hover:hidden">
-            <ul class="font-14__Manrope_da1155 cursor-pointer">
-                <li class="text-white font-bold text-2xl">Sudarshan Adhikari</li>
-                <li class="font-normal text-[16px] text-white">Web Developer</li>
-                <li class="font-normal text-[16px] text-white">6 Years Of Experience</li>
-            </ul>
-        </div>
-        <img class="rounded-2xl w-full" src="images/Mentors (1 of 2).webp" alt="">
-        <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 grid justify-center items-center p-4">
-            <div class="p-2 mt-4">
-                <ul class="font-14__Manrope_da1155 cursor-pointer">
+<div class="bg-red-50 p-10 ">
+    <b class="text-[40px] text-[#020817]">Meet Your Mentors</b>
+    <p class="text-[22px] mb-12 text-[#020817] ">Unleash your potential with Trainingpoint's industry veterans who have <br> mastered the ever-changing technology landscape.</p>
+
+
+    <div class="grid grid-cols md:grid-cols-2 md:items-center lg:grid-cols-3 xl:grid-cols-4 gap-4 p-10 ">
+        <!-- Mentor 1 -->
+        <div class=" relative group w-[324px] h-[486px] ">
+            <div class="absolute ml-2 mt-[380px] group-hover:hidden ">
+                <ul class="font-14__Manrope_da1155 ">
                     <li class="text-white font-bold text-2xl">Sudarshan Adhikari</li>
                     <li class="font-normal text-[16px] text-white">Web Developer</li>
                     <li class="font-normal text-[16px] text-white">6 Years Of Experience</li>
                 </ul>
             </div>
-            <p class="text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 cursor-pointer">With over six years of experience in the web development industry, Sudarshan Adhikari is a dedicated and highly skilled professional at WebPoint Solutions. Known for his expertise in tackling complex web applications.</p>
+            <img class="rounded-2xl w-full" src="images/Mentors (1 of 2).webp" alt="">
+            <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 justify-center items-center p-4">
+                <div class="p-2 mt-12">
+                    <ul class="font-14__Manrope_da1155 ">
+                        <li class="text-white font-bold text-[22px]">Sudarshan Adhikari</li>
+                        <li class="font-normal text-[18px] text-white">Web Developer</li>
+                        <li class="font-normal text-[18px] text-white">6 Years Of Experience</li>
+                    </ul>
+                </div>
+                <p class=" mt-4 p-2 text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 ">With over six years of experience in the web development industry, Sudarshan Adhikari is a dedicated and highly skilled professional at WebPoint Solutions. Known for his expertise in tackling complex web applications.</p>
+            </div>
         </div>
-    </div>
-
-    <!-- Mentor 2 -->
-    <div class="relative group w-full sm:w-72 md:w-80 lg:w-96">
-        <div class="absolute p-2 mt-32 group-hover:hidden">
-            <ul class="font-14__Manrope_da1155 cursor-pointer">
-                <li class="text-white font-bold text-2xl">Ashish Chapagain</li>
-                <li class="font-normal text-[16px] text-white">UI/UX Designer</li>
-                <li class="font-normal text-[16px] text-white">8 Years Of Experience</li>
-            </ul>
-        </div>
-        <img class="rounded-2xl w-full" src="images/Mentors (2 of 6).webp" alt="">
-        <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 grid justify-center items-center p-4">
-            <div class="p-2 mt-4">
-                <ul class="font-14__Manrope_da1155 cursor-pointer">
+    <!-- mentor-2 -->
+        <div class=" relative group w-[324px] h-[486px] ">
+            <div class="absolute ml-2 mt-[380px] group-hover:hidden ">
+                <ul class="font-14__Manrope_da1155 ">
                     <li class="text-white font-bold text-2xl">Ashish Chapagain</li>
                     <li class="font-normal text-[16px] text-white">UI/UX Designer</li>
                     <li class="font-normal text-[16px] text-white">8 Years Of Experience</li>
                 </ul>
             </div>
-            <p class="text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 cursor-pointer">With 8+ years in design and development, Ashish specializes in crafting user-centric digital products. He excels in bridging design and tech teams, using an iterative, data-driven approach to create engaging digital experiences.</p>
+            <img class="rounded-2xl w-full" src="images/Mentors (2 of 6).webp" alt="">
+            <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 justify-center items-center p-4">
+                <div class="p-2 mt-12">
+                    <ul class="font-14__Manrope_da1155 ">
+                        <li class="text-white font-bold text-[22px]">Ashish Chapagain</li>
+                        <li class="font-normal text-[18px] text-white">UI/UX Designer</li>
+                        <li class="font-normal text-[18px] text-white">8 Years Of Experience</li>
+                    </ul>
+                </div>
+                <p class=" mt-4 p-2 text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 ">With 8+ years in design and development, Ashish specializes in crafting user-centric digital products. He excels in bridging design and tech teams, using an iterative, data-driven approach to create engaging digital experiences.
+                    
+                    </p>
+            </div>
         </div>
-    </div>
-
-    <!-- Mentor 3 -->
-    <div class="relative group w-full sm:w-72 md:w-80 lg:w-96">
-        <div class="absolute p-2 mt-32 group-hover:hidden">
-            <ul class="font-14__Manrope_da1155 cursor-pointer">
-                <li class="text-white font-bold text-2xl">Mukesh Raj Khadka</li>
-                <li class="font-normal text-[16px] text-white">QA Engineer</li>
-                <li class="font-normal text-[16px] text-white">3 Years Of Experience</li>
-            </ul>
-        </div>
-        <img class="rounded-2xl w-full" src="images/For Training Point (4 of 4).webp" alt="">
-        <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 grid justify-center items-center p-4">
-            <div class="p-2 mt-4">
-                <ul class="font-14__Manrope_da1155 cursor-pointer">
+    
+    <!-- mentor-3 -->
+        <div class=" relative group w-[324px] h-[486px] ">
+            <div class="absolute ml-2 mt-[380px] group-hover:hidden ">
+                <ul class="font-14__Manrope_da1155 ">
                     <li class="text-white font-bold text-2xl">Mukesh Raj Khadka</li>
                     <li class="font-normal text-[16px] text-white">QA Engineer</li>
                     <li class="font-normal text-[16px] text-white">3 Years Of Experience</li>
                 </ul>
             </div>
-            <p class="text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 cursor-pointer">Mukesh Raj Khadka is a proficient QA Engineer with three years of experience in ensuring the quality and reliability of software products. His meticulous attention to detail and strong analytical skills enable him to identify and address potential issues before they reach the end-user.</p>
+            <img class="rounded-2xl w-full" src="images/For Training Point (4 of 4).webp" alt="">
+            <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 justify-center items-center p-4">
+                <div class="p-2 mt-12">
+                    <ul class="font-14__Manrope_da1155 ">
+                        <li class="text-white font-bold text-[22px]">Mukesh Raj Khadka</li>
+                        <li class="font-normal text-[18px] text-white">QA Engineer</li>
+                        <li class="font-normal text-[18px] text-white">3 Years Of Experience</li>
+                    </ul>
+                </div>
+                <p class="mt-4 p-2 text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 ">Mukesh Raj Khadka is a proficient QA Engineer with three years of experience in ensuring the quality and reliability of software products. His meticulous attention to detail and strong analytical skills enable him to identify and address potential issues before they reach the end-user.
+                </p>
+            </div>
         </div>
-    </div>
-
-    <!-- Mentor 4 -->
-    <div class="relative group w-full sm:w-72 md:w-80 lg:w-96">
-        <div class="absolute p-2 mt-32 group-hover:hidden">
-            <ul class="font-14__Manrope_da1155 cursor-pointer">
-                <li class="text-white font-bold text-2xl">Raj Kumar Rai</li>
-                <li class="font-normal text-[16px] text-white">DevOps Engineer</li>
-                <li class="font-normal text-[16px] text-white">7 Years Of Experience</li>
-            </ul>
-        </div>
-        <img class="rounded-2xl w-full" src="images/For Training Point (2 of 4).webp" alt="">
-        <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 grid justify-center items-center p-2">
-            <div class="p-4 mt-4">
-                <ul class="font-14__Manrope_da1155 cursor-pointer">
+    <!-- mentor 4 -->
+        <div class=" relative group w-[324px] h-[486px]">
+            <div class="absolute ml-2 mt-[380px] group-hover:hidden ">
+                <ul class="font-14__Manrope_da1155 ">
                     <li class="text-white font-bold text-2xl">Raj Kumar Rai</li>
                     <li class="font-normal text-[16px] text-white">DevOps Engineer</li>
                     <li class="font-normal text-[16px] text-white">7 Years Of Experience</li>
                 </ul>
             </div>
-            <p class="text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 cursor-pointer">Raj Kumar Rai is an experienced DevOps Engineer proficient in Cloud Computing, containerization, and automating large-scale infrastructure, dedicated to delivering high-performance solutions that enhance the end-user experience worldwide.</p>
+            <img class="rounded-2xl w-full" src="images/For Training Point (2 of 4).webp" alt="">
+            <div class="opacity-0 group-hover:opacity-100 absolute top-0 right-0 left-0 bottom-0 justify-center items-center p-4">
+                <div class="p-2 mt-12">
+                    <ul class="font-14__Manrope_da1155 ">
+                        <li class="text-white font-bold text-[22px]">Raj Kumar Rai</li>
+                        <li class="font-normal text-[18px] text-white">DevOps Engineer</li>
+                        <li class="font-normal text-[18px] text-white">7 Years Of Experience</li>
+                    </ul>
+                </div>
+                <p class=" p-2 mt-4 text-white font-semibold text-[18px] items-center justify-center font-14__Manrope_da1155 ">Raj Kumar Rai is an experienced DevOps Engineer proficient in Cloud Computing, containerization, and automating large-scale infrastructure, dedicated to delivering high-performance solutions that enhance the end-user experience worldwide.
+                </p>
+            </div>
         </div>
+       
     </div>
-</div>
-
-
-<div class="flex justify-center mt-8 md:mt-10 lg:mt-12">
-    <p class="text-orange-500 underline font-14__Manrope_da1155 font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+    
+    <p class=" text-center text-orange-500 underline font-14__Manrope_da1155 font-normal text-xl sm:text-2xl md:text-3xl lg:text-4xl">
         See all mentors
     </p>
-</div>
+    </div>
+
 
 
 
@@ -393,23 +414,19 @@
             <p class="text-xl font-[#000000] text-bold mt-[1rem] font-14__manrope_da1155">The Top 5 Skills Every IT Project Manager Need to succeed</p>
         </div>
     </div>
-</div>
-
-   
-
-<div class="bg-[#ffffff] flex justify-center mt-[2rem] px-4">
     <p class="text-orange-500 underline font-14__Manrope_da1155 font-normal text-xl sm:text-lg md:text-xl lg:text-2xl">
         See all blogs
     </p>
 </div>
 
-        <div class="bg-slate-100 mt-[4rem] p-[4rem]">
+
+        <div class="bg-slate-100 p-[4rem]">
             <b class="text-4xl sm:text-3xl text-center md:text-4xl">Colleges we have partnered with</b>
-            <p class="text-2xl font-14__Manrope_da1155 font-normal mt-[1rem] text-center sm:text-xl md:text-2xl">
-                We've partnered with reputed colleges to ensure university education remains a key focus. These partnerships help us provide well-rounded <b> IT training programs </b> in Nepal, blending academic excellence with practical skills.
+            <p class="text-2xl font-14__Manrope_da1155 font-normal mt-[1rem] text-start sm:text-xl md:text-2xl">
+                We've partnered with reputed colleges to ensure university education remains a key focus. These <br> partnerships help us provide well-rounded <b> IT training programs </b> in Nepal, blending academic <br> excellence with practical skills.
             </p>
         
-            <marquee loop="-1" scrollamount="5" class="mt-[3rem] w-full">
+            <marquee loop="-5" scrollamount="5" class="mt-[3rem] w-full">
                 <div class="flex overflow-x-auto sm:overflow-hidden gap-4 px-4 sm:px-0">
                     <img src="images/Softwarica.webp" alt="" class="min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px]">
                     <img src="images/Universal Engienering.webp" alt="" class="min-w-[120px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px]">
@@ -423,19 +440,19 @@
             </marquee>
         </div>
         
-        <div class="mt-[4rem] bg-red-50 p-10">
+        <div class="  bg-red-50 p-10">
             <b class="text-4xl">News and Events</b>
-            <div class="flex flex-wrap justify-evenly mt-[2rem] gap-4">
-                <div class="bg-[#ffffff] object-cover w-full sm:w-1/2 lg:w-1/3">
-                    <img class="rounded-2xl w-full" src="images/Mask group-4.webp" alt="">
-                    <div class="bg-[#ffffff] p-[1rem]">
+            <div class="grid md:grid-cols-2 sm:grid-cols-1 mx- mt-[2rem] gap-4">
+                <div class="bg-red-50 object-cover w-full ">
+                    <img class=" w-full rounded-[10px]" src="images/Mask group-4.webp" alt="">
+                    <div class="bg-red-50 p-[1rem]">
                         <p class="text-l text-slate-500 font-14__manrope_da1155">MOU</p>
                         <p class="text-2xl font-[#000000] text-bold font-14__manrope_da1155">MOU with PCPS College</p>
                     </div>
                 </div>
-                <div class="bg-[#ffffff] object-cover w-full sm:w-1/2 lg:w-1/3">
-                    <img class="rounded-2xl w-full" src="images/Mask group-2.webp" alt="">
-                    <div class="bg-[#ffffff] p-[1rem]">
+                <div class="bg-red-50 object-cover w-full  ">
+                    <img class=" w-full rounded-[10px]" src="images/Mask group-2.webp" alt="">
+                    <div class="bg-red-50 p-[1rem]">
                         <p class="text-l text-slate-500 font-14__manrope_da1155">MOU</p>
                         <p class="text-2xl font-[#000000] text-bold font-14__manrope_da1155">MOU with the Westminster College</p>
                     </div>
@@ -445,114 +462,170 @@
         </div>
         
 
-        <div class="bg-slate-100 mt-[3rem]">
-            <b class="flex justify-center font-14__Manrope_da1155 font-normal text-4xl sm:text-3xl md:text-4xl">Frequently Asked Questions</b>
-            <div class="p-8 mt-[4rem]">
-                <!-- Question 1 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="Which institute is best for IT Courses ?" id="faq1">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 2 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="Is there a Project Management Course in Nepal ?" id="faq2">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 3 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="Is UI/UX design a good career in Nepal ?" id="faq3">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 4 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="What is an IT Training Course ?" id="faq4">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 5 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="Which IT Courses is best in Nepal ?" id="faq5">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 6 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="What is the highest paying IT job in Nepal ?" id="faq6">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
-        
-                <!-- Question 7 -->
-                <div class="relative mt-[2rem] w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <input class="rounded-2xl border-[1px] w-full text-2xl sm:text-xl p-6 text-[#000000]" placeholder="Which IT Courses is best in Nepal ?" id="faq7">
-                    <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
-                        <i class="ri-add-circle-line"></i>
-                    </span>
-                </div>
+        <div class="min-h-screen bg-slate-100 pt-8">
+            <div class="flex justify-center items-center font-bold mt-20 mb-12 text-5xl sm:text-4xl">
+                <h1>Frequently Asked Questions</h1>
             </div>
-        </div>
+    
+    
+            <div class="grid p-20 gap-8">
+    
+                <div >
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer " onclick="toggleContent1()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Which institute is best for IT courses?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">
+                            Training is the best-in-class IT training institute in Nepal. It was founded by IT experts and entrepreneurs who knew there was a massive gap between academia and real-world IT workforce requirements. To fill that gap and elevate Nepal’s IT standard, Traninigpoint founders set out to revolutionize Nepal’s IT education, making career-oriented IT Courses accessible and affordable to everyone in the country. Most importantly, our courses are internship-focused and designed to help IT students smoothly transition to the workforce.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div >
+                    <div class=" relative bg-white  p-4 rounded-2xl cursor-pointer " onclick="toggleContent2()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Is there a project management course in nepal?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content1" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">
+                            Trainingpoint, a leading IT training institute in Nepal, offers an IT project management course. Our graduates are already working as IT Project Managers and Project Coordinators for some of the top brands in Nepal. This success is a result of our expert faculty, industry-relevant curriculum, and internship-focused courses. We emphasize practical training through real-world projects, case studies, and interactive sessions, which help aspiring project managers apply their theoretical knowledge in the workforce.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div >
+    
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer" onclick="toggleContent3()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Is UI/UX design a good career in Nepal?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content2" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">Since UI/UX design courses are not offered by any university or academic institute in Nepal, there is a lack of qualified professionals in this field. Many IT companies are actively seeking skilled UI/UX designers, but certainly, there's a huge shortage of talent. Aspiring designers often opt for alternative routes, such as enrolling in design or IT institutes, to acquire UI/UX design skills and become proficient with the necessary tools. Among various IT roles, UI/UX design is now considered one of the highest-paid jobs in</p>
+                    </div>
+    
+                </div>
+                <div >
+    
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer" onclick="toggleContent4()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Which is an IT Training Course?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content3" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">IT training courses incorporates a wide range of IT programs, from front-end web development to backend and software engineering to more advanced programs like Data Scientist and System Architects; the list goes on forever. With endless learning and career opportunities in the IT industry, many students in Nepal have started looking for the best career path. Traningpoint can be a great place to hone your skills, build your confidence, and find the right employer to hire you.</p>
+                    </div>
+    
+                </div>
+                <div >
+    
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer" onclick="toggleContent5()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Which IT course is best in Nepal?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content4" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">The best IT courses in Nepal can be categorized into two segments: Pursuing computer science degrees or taking the alternative route. If you’re taking an alternative route, pursue web development or a front–end development course. It is the most beginner-friendly course and can be a great starting point in your IT learning journey. At Trainingpoint, we offer web development courses taught by experienced and currently working professionals who know all the ins and outs of the IT industry.</p>
+                    </div>
+    
+                </div>
+                <div >
+    
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer" onclick="toggleContent6()">
+                        <h1 class="text-lg md:text-2xl font-semibold">What is the highest paying IT job in nepal?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content5" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">Software Developer/Engineer: NPR 600,000 to NPR 1,200,000 per annum. Data Scientist: NPR 800,000 and NPR 1,500,000 per annum. Cybersecurity Analyst: NPR 700,000 to NPR 1,400,000 annually. Cloud Solutions Architect: NPR 800,000 and NPR 1,500,000 per annum. DevOps Engineer: NPR 700,000 to NPR 1,300,000 per annum.</p>
+                    </div>
+    
+                </div>
 
-        <div class="w-full h-auto md:h-[412px] flex justify-center items-center bg-blue-950 mt-[4rem] p-6 md:p-10 overflow-hidden flex-col md:flex-row">
-            <!-- Left Section (Text and Button) -->
-            <div class="w-full md:w-[50%] text-center md:text-left">
-                <p class="text-2xl md:text-4xl text-[#FFFFFF]">Seize the Opportunity: Reserve Your Seat at Trainingpoint Today!</p>
-                <button class="bg-orange-500 text-[#ffffff] mt-[2rem] h-[50px] w-[200px] md:w-[150px] rounded-full p-2">Book your seat</button>
-            </div>
-        
-            <!-- Right Section (Image) -->
-            <div class="w-full md:w-[50%] flex justify-center items-center mt-6 md:mt-0">
-                <div class="h-[250px] md:h-[500px] w-[250px] md:w-[300px] bg-yellow-500 rounded-full rotate-45 flex items-center mt-6 md:mt-[100px]">
-                    <img class="w-[200px] md:w-[534px] h-[200px] md:h-[434px] rotate-[-45deg]" src="images/booknow-image.png" alt="Book Now">
+                <div >
+    
+                    <div class="relative bg-white  p-4 rounded-2xl cursor-pointer" onclick="toggleContent7()">
+                        <h1 class="text-lg md:text-2xl font-semibold">Which IT course is best in Nepal?</h1>
+                        <span class="right-3 top-0 bottom-0 flex items-center absolute text-6xl text-slate-200"> 
+                            <i class="ri-add-circle-line"></i>
+                        </span>
+                    </div>
+                    <div id="content6" class="hidden bg-white p-4 rounded-2xl">
+                        <p class="text-sm md:text-lg">The best IT courses in Nepal can be categorized into two segments: Pursuing computer science degrees or taking the alternative route. If you’re taking an alternative route, pursue web development or a front–end development course. It is the most beginner-friendly course and can be a great starting point in your IT learning journey. At Trainingpoint, we offer web development courses taught by experienced and currently working professionals who know all the ins and outs of the IT industry.</p>
+                    </div>
+    
                 </div>
             </div>
-        </div>
 
 
-        <footer class="py-10 px-6 flex flex-col md:flex-row justify-between">
-            <div class="w-full md:w-auto text-center md:text-left">
-                <ul class="flex gap-4 justify-center md:justify-start text-[#100E10]">
-                    <li>Course</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Privacy Policy</li>
-                </ul>
-                <h1 class="text-sm text-[#100E10] mt-[16px]">© Trainingpoint 2024.</h1>
+              <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] bg-blue-950 mt-16 relative overflow-hidden w-full">
+      
+                <div class="flex flex-col items-center lg:items-start justify-center p-6 lg:pl-24 z-10">
+                    <h2 class="text-2xl md:text-4xl text-white text-center lg:text-left">
+                        Seize the Opportunity: Reserve
+                        <br class="hidden md:block">
+                        Your Seat at Trainingpoint
+                        <br class="hidden md:block">
+                        Today!
+                    </h2>
+                    <button class="mt-8 bg-[#ff7300] text-white px-8 py-3 rounded-full hover:bg-[#e65d00] transition-colors">
+                        Book your seat
+                    </button>
+                </div>
+        
+              
+                <div class=" ">
+                    <div class=" relative bg-[#ffe567] h-[700px] w-[380px] rounded-full rotate-45 opacity-90 ml-[20%] mb-[-20%]">
+                    </div>
+                </div>
+        
+               
+                <div class="absolute bottom-0 right-0 h-full lg:h-auto lg:w-1/2 flex justify-end items-end md:mt-20">
+                    <img src="images/booknow-image.png"alt="Book Now" class="h-full w-full p- "/>
+                </div>
             </div>
+        
+            <footer class="py-10 px-6 flex flex-col md:flex-row justify-between relative bg-white h-[270px]">
+                <div class="w-full md:w-auto text-center md:text-left">
+                    <ul class="flex gap-4 justify-center md:justify-start text-[#100E10]">
+                        <li>Course</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                    <h1 class="text-sm text-[#100E10] mt-[16px]">© Trainingpoint 2024.</h1>
+                </div>
+                
+                <div class="w-full md:w-auto flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start mt-6 md:mt-0">
+                    <div>
+                        <img class="h-[50px] w-[50px] mix-blend-multiply mr-10" src="images/triningpoint.jpeg.jpg" alt="Trainingpoint Logo">
+                    </div>
             
-            <div class="w-full md:w-auto flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start mt-6 md:mt-0">
-                <div>
-                    <img class="h-[60px] md:h-[80px] w-auto" src="images/logo.svg" alt="Trainingpoint Logo">
+                    <ul class="text-center md:text-left gap-4 mt-4 md:mt-0">
+                        <li class="text-bold font-[18px] text-[#020817]">Training Point</li>
+                        <li class="text-normal font-[16px] text-[#020817]">Gairidhara, Kathmandu</li>
+                        <li class="text-normal font-[16px] text-[#020817]">9802340180</li>
+                        <li class="font-[16px] text-[#ff7200]">info@trainingpoint.io</li>
+                    </ul>
+            
+                    <div class="flex gap-4 mt-4 md:mt-0">
+                        <i class="ri-instagram-line text-xl md:text-2xl"></i>
+                        <i class="ri-tiktok-fill text-xl md:text-2xl"></i>
+                        <i class="ri-facebook-circle-line text-xl md:text-2xl"></i>
+                        <i class="ri-youtube-line text-xl md:text-2xl"></i>
+                    </div>
                 </div>
-        
-                <ul class="text-center md:text-left gap-4 mt-4 md:mt-0">
-                    <li class="text-bold font-[18px] text-[#020817]">Training Point</li>
-                    <li class="text-normal font-[16px] text-[#020817]">Gairidhara, Kathmandu</li>
-                    <li class="text-normal font-[16px] text-[#020817]">9802340180</li>
-                    <li class="font-[16px] text-[#ff7200]">info@trainingpoint.io</li>
-                </ul>
-        
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <i class="ri-instagram-line text-xl md:text-2xl"></i>
-                    <i class="ri-tiktok-fill text-xl md:text-2xl"></i>
-                    <i class="ri-facebook-circle-line text-xl md:text-2xl"></i>
-                    <i class="ri-youtube-line text-xl md:text-2xl"></i>
-                </div>
-            </div>
-        </footer>
+            </footer>
+              
         
 
         <script src="script.js"></script>  
